@@ -1,0 +1,24 @@
+var location1 = 3,
+  location2 = 4,
+  location3 = 5,
+  guess, guesses = 0,
+  hits = 0,
+  isSunk = false;
+while (isSunk == false) {
+  guess = prompt("ready, aim,fire!(Enter a number b/w 0-6)");
+  if (guess < 0 && guess > 6) {
+    alert("Enter a valid cell number ");
+    ''
+  } else {
+    guesses = guesses + 1;
+    if (guess == location1 || guess == location2 || guess == location3) {
+      hits += 1;
+      if (hits == 3) {
+        isSunk = true;
+        alert("You Sank my battleship!!");
+      }
+    }
+  }
+}
+var statistic = "You took " + guesses + "  attempts to sank my battleship. And had a accuracy of " + (3 / guesses);
+alert(statistic);
