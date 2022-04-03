@@ -1,5 +1,5 @@
-function clunk(times) {
-  var num = times;
+function clunk(iteration) {
+  var num = iteration;
   while (num > 0) {
     display("clunk");
     num = num - 1;
