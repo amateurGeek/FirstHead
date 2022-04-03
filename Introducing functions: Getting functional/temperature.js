@@ -1,13 +1,13 @@
 function whatShallIWear(temp) {
   if (temp < 60) {
-    alert("Wear a jacket");
+    console.log("Wear a jacket");
   } else if (temp < 70) {
-    alert("Wear a sweater");
+    console.log("Wear a sweater");
   } else {
-    alert("Wear a t-shirt");
+    console.log("Wear a t-shirt");
   }
 }
 
-whatShallIWear(60);
+whatShallIWear(50);
 whatShallIWear(80);
-whatShallIWear(70);
+whatShallIWear(60);
