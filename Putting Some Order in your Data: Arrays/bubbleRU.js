@@ -1,10 +1,9 @@
 var scores = ["60", "50", "60", "58", "54", "54", "58", "50", "52", "54", "48", "69", "60", "50", "60", "58", "54", "54", "58", "50", "52", "54", "48", "69", "60", "50", "60", "58", "54", "54", "58", "50", "52", "54", "48", "69"];
 
-var output,i=0;
+var output, i = 0;
 
-while(i<scores.length)
-{
-	output = "Bubbles Solution #"+i+" score:"+ scores[i];
+while (i < scores.length) {
+  output = "Bubbles Solution #" + i + " score:" + scores[i];
   console.log(output);
-  i+=1;
+  i += 1;
 }
