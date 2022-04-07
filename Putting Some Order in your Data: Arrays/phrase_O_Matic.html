@@ -1,13 +1,29 @@
 <!doctype html>
 <html lang="en">
+
   <head>
-  <title>Battleship</title>
-  <meta charset="UTF-8">
+    <title>Phrase-O-matic</title>
+    <meta charset="UTF-8">
+    <script>
+      function makePhrase() {
+        var words1 = ["24/7", "multi-tier", "30,000 foot", "B-to-B", "win-win"];
+        var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+        var words3 = ["process", "solution", "triping-point", "strategy", "vision"];
+
+        var random1 = Math.floor(Math.random() * words1.length);
+      var random2 = Math.floor(Math.random() * words2.length)
+      var random3 = Math.floor(Math.random() * words3.length)
+
+      var phrase = words1[random1] + " " + words2[random2] + " " + words3[random3] + ".";
+      alert(phrase);
+      }
+
+      makePhrase();
+
+    </script>
   </head>
+
   <body>
-  <h1>
-  Play battleship!
-  </h1>
-  <script src="battleship.js"></script>
   </body>
+
 </html>
