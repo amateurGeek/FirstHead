@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Bubble Factory Test Lab</title>
+    <meta charset="UTF-8">
+    <script>
+      var scores = ["60", "50", "60", "58", "54", "54", "58", "50", "52", "54", "48", "69", "60", "50", "60", "58", "54", "54", "58", "50", "52", "54", "48", "69", "60", "50", "60", "58", "54", "54", "58", "50", "52", "54", "48", "69"];
+
+      var costs = [".60", ".50", ".60", ".58", ".54", ".54", ".58", ".50", ".52", ".54", ".48", ".69", ".60", ".50", ".60", ".58", ".54", ".54", ".58", ".50", ".52", ".54", ".48", ".69", ".60", ".50", ".60", ".58", ".54", ".54", ".58", ".50", ".52", ".54", ".48", ".69"]
+
+      var highScore = 0;
+
+      function printAndGetHighScore(scores) {
+        for (var i = 0; i < scores.length; i++) {
+          output = "Bubbles Solution #" + i + " score:" + scores[i];
+          if (highScore < scores[i]) {
+            highScore = scores[i];
+          }
+          console.log(output);
+        }
+        return highScore;
+      }
+
+      function getBestResults(scores, highScore) {
+        var bestSolutions = [];
+        for (var i = 0; i < scores.length; i++) {
+          if (scores[i] == highScore) {
+            bestSolutions.push(i);
+          }
+        }
+        return bestSolutions;
+      }
+
+      var highScore = printAndGetHighScore(scores);
+      console.log("Bubbles Test : " + scores.length);
+      console.log("Highes Bubble score : " + highScore);
+
+      var bestSolutions = getBestResults(scores, highScore);
+      console.log("Solutions with the Highest Scores : " + bestSolutions);
+
+      function getMostCostEffectiveSolution(scores, costs, highScore) {
+        var cost = 100;
+        var index;
+
+        for (var i = 0; i < scores.length; i++) {
+          if (scores[i] == highScore) {
+            if (cost > costs[i]) {
+              index = i;
+              cost = costs[i];
+            }
+          }
+        }
+        return index;
+      }
+
+      var getMostCostEffectiveSolution = getMostCostEffectiveSolution(scores, costs, highScore);
+ console.log("Bubble Solution #" + getMostCostEffectiveSolution + " is the most Effecttive !!");
+
+    </script>
+  </head>
+
+  <body></body>
+
+</html>
