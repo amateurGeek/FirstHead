@@ -27,6 +27,7 @@
           color: colors[rand4],
           passengers: rand5,
           convertible: convertible[rand6],
+          mileage: 0
         };
         return car;
       }
