@@ -10,6 +10,9 @@ function t9 (){
 return "abc"
 }
 var t10 = null;
+var t11 = 10/0;
+var t12 = 0/0;
+
 
 console.log(typeof t1)
 console.log(typeof t2)
@@ -21,3 +24,5 @@ console.log(typeof t7)
 console.log(typeof t8)
 console.log(typeof t9)
 console.log(typeof t10)
+console.log(t11)
+console.log(t12)
