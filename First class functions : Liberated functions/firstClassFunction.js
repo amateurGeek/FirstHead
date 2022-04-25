@@ -32,6 +32,17 @@ return (passenger.name==="Dr. Evel");
 function checkNotPaid(passenger){
 return(!passenger.paid);
 }
+function printPassenger(passenger){
+var message = passenger.name;
+if(passenger.paid == true){
+message = message + " has paid";
+}
+else {
+message =message + " has not paid";
+}
+console.log(message);
+return false;
+}
 
 var allCanFly = processPassenger(passengers, checkNoFlyList);
 if(!allCanFly){
@@ -42,3 +53,5 @@ var allPaid = processPassenger(passengers, checkNotPaid);
 if(!allPaid){
 console.log("Not Everyone has paid!! Cannot Fly");
 }
+
+processPassenger(passengers, printPassenger);
